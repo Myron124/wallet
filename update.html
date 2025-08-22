@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оновлення пароля</title>
+  <link rel="stylesheet" href="css/update.css">
+</head>
+<body>
+  <main class="wrap">
+    <h2>Змінити пароль</h2>
+
+    <form id="updateForm" novalidate>
+      <div class="field">
+        <label for="oldPassword">Старий пароль</label>
+        <input
+          type="password"
+          id="oldPassword"
+          name="oldPassword"
+          required
+          autocomplete="current-password"
+        />
+      </div>
+
+      <div class="field">
+        <label for="newPassword">Новий пароль</label>
+        <input
+          type="password"
+          id="newPassword"
+          name="newPassword"
+          required
+          minlength="6"
+          autocomplete="new-password"
+        />
+        <small class="hint">Мінімум 6 символів</small>
+      </div>
+
+      <button type="submit" class="btn">Оновити пароль</button>
+    </form>
+
+    <div id="message" aria-live="polite" role="status"></div>
+
+    <button class="link-btn" onclick="window.location.href='currency.html'">
+      ← Повернутись на профіль
+    </button>
+  </main>
+
+  <script src="js/update.js" defer></script>
+</body>
+</html>

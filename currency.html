@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Wallet — Курс валют (ПриватБанк)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/currency.css" />
+</head>
+<body>
+  <!-- Напівпрозорий SVG-фон -->
+  <svg class="bg-waves" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="waveGrad" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="rgba(99,102,241,0.20)" />
+        <stop offset="100%" stop-color="rgba(56,189,248,0.20)" />
+      </linearGradient>
+    </defs>
+    <path d="M0,120 C240,200 360,0 720,80 C1080,160 1200,40 1440,120 L1440,600 L0,600 Z" fill="url(#waveGrad)"/>
+    <path d="M0,220 C240,300 360,100 720,180 C1080,260 1200,140 1440,220 L1440,600 L0,600 Z" fill="url(#waveGrad)" opacity="0.6"/>
+    <path d="M0,320 C240,400 360,200 720,280 C1080,360 1200,240 1440,320 L1440,600 L0,600 Z" fill="url(#waveGrad)" opacity="0.35"/>
+  </svg>
+
+  <main class="container">
+    <section class="card">
+      <header class="card__header">
+        <div class="title-wrap">
+          <h1>AI Wallet</h1>
+          <p class="subtitle">Актуальний курс валют з ПриватБанку</p>
+        </div>
+        <div class="actions">
+          <button id="refreshBtn" class="btn">Оновити курс</button>
+        </div>
+      </header>
+
+      <div class="meta">
+        <span id="updatedAt">Оновлено: —</span>
+        <span class="dot">•</span>
+        <span>Джерело: ПриватБанк API</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rates" aria-live="polite">
+          <thead>
+            <tr>
+              <th>Currency</th>
+              <th>Purchase</th>
+              <th>Sale</th>
+            </tr>
+          </thead>
+          <tbody id="ratesBody">
+            <!-- Рядки буде додано з JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="card__footer">
+        <small>Оновлення автоматично кожні 30 хвилин.</small>
+      </footer>
+    </section>
+  </main>
+ <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Фон -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Меню -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <div class="profile">
+      <img src="https://via.placeholder.com/70" alt="avatar">
+      <h3>neti_yan</h3>
+      <p>VIP 0</p>
+      <p>Validity Period: Permanent</p>
+    </div>
+    <ul class="menu">
+  <li><i>🏠</i> Home</li>
+  <li><i>👤</i> Account</li>
+  <li><i>💱</i> Exchange rate</li>
+  <li><i>📖</i> Direction for use</li>
+  <li><i>❓</i> FAQ</li>
+  <li><i>✏️</i> Feedback</li>
+  <li id="logoutBtn"><i>↩️</i> Log out</li>
+</ul>
+  </div>
+
+  <script src="./js/currency.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Вхід</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login-card">
+    <h2>Вхід</h2>
+    <form id="loginForm">
+      <label>📱 Номер телефону</label>
+      <input type="text" id="phone" placeholder="+380XXXXXXXXX" required>
+
+      <label>🔐 Пароль</label>
+      <input type="password" id="password" placeholder="Введіть пароль" required>
+
+      <button type="submit">Увійти</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+
+    <p class="register-link">
+      Ще немає акаунта? <a href="index.html">Зареєструватися</a>
+    </p>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

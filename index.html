@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Wallet</title>
+</head>
+<body>
+    <div class="container">
+    <label class="avatar" for="avatarInput" title="Click to change avatar">
+        <span id="avatarLetter">M</span>
+        <img id="avatarImage" style="display:none;">
+    </label>
+    <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+<a href="./login.html" id="account">Account for log in</a>
+   
+    <div style="display:flex; gap:5px;">
+        <select id="countryCode">
+            <option value="+1">+1</option>
+            <option value="+380">+380</option>
+            <option value="+44">+44</option>
+        </select>
+        <input type="text" id="mobile" placeholder="Mobile number">
+    </div>
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirmPassword" placeholder="Enter password again">
+    <input type="text" id="username" placeholder="User name">
+    <div class="note">Please, remember your payment password</div>
+    <button id="saveBtn">Register and log in</button>
+</div>
+    <script src="js/script.js">
+</script>
+</body>
+</html>

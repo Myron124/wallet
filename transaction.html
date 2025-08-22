@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet App</title>
+  <link rel="stylesheet" href="css/transaction.css">
+</head>
+<body>
+  <!-- Бургер -->
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Фон -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Бокове меню -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <div class="profile">
+      <img src="https://via.placeholder.com/70" alt="avatar">
+      <h3>neti_yan</h3>
+      <p>VIP 0</p>
+      <p>Validity Period: Permanent</p>
+    </div>
+    <ul class="menu">
+      <li><i>🏠</i> Home</li>
+      <li><i>👤</i> Account</li>
+      <li><i>💱</i> Exchange rate</li>
+      <li><i>📖</i> Direction for use</li>
+      <li><i>❓</i> FAQ</li>
+      <li><i>✏️</i> Feedback</li>
+      <li id="logoutBtn"><i>↩️</i> Log out</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Total Assets</h2>
+      <div class="total">230</div>
+      <div class="balances">
+        <div>Available Balance: 20</div>
+        <div>Freeze Balance: 0</div>
+      </div>
+    </div>
+    <div class="records">
+      <div class="record expense"><span>dn****y</span><span>31322 USDT</span></div>
+      <div class="record income"><span>ti****b</span><span>67567 USDT</span></div>
+      <div class="record expense"><span>ak****fg</span><span>9132 USDT</span></div>
+      <div class="record income"><span>tgf****b</span><span>67127 USDT</span></div>
+    </div>
+  </div>
+
+  <div class="fab" id="openModal">+</div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Add transaction</h3>
+      <div class="toggle">
+        <button id="btnIncome" class="active income">Income</button>
+        <button id="btnExpense">Expense</button>
+      </div>
+      <div id="formFields">
+        <input type="number" placeholder="0.00">
+        <input type="date">
+        <textarea placeholder="Comment"></textarea>
+      </div>
+      <div class="actions">
+        <button class="add">ADD</button>
+        <button class="cancel" id="closeModal">CANCEL</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/transaction.js"></script>
+</body>
+</html>

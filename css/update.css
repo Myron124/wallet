@@ -1,0 +1,100 @@
+:root {
+  --ok: #18e06f;
+  --err: #ff4d6d;
+  --text: #f5f5fa;
+  --bg: #0a0c18;
+  --panel: #14182b;
+  --accent: #5468ff;
+  --accent-hover: #7081ff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.wrap {
+  width: min(480px, 92vw);
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.55);
+  animation: fadeIn .5s ease;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.field { margin: 16px 0; }
+label { display: block; margin-bottom: 6px; font-weight: 600; }
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #2d3350;
+  border-radius: 12px;
+  background: #1b2036;
+  color: var(--text);
+  outline: none;
+  transition: border .3s, box-shadow .3s;
+}
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(84,104,255,.35);
+}
+
+.hint { opacity: .65; font-size: .85rem; margin-top: 4px; display: block; }
+
+.btn {
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .3s, transform .2s;
+}
+.btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+#message {
+  margin-top: 16px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .35s ease, transform .35s ease;
+  text-align: center;
+}
+#message.show { opacity: 1; transform: translateY(0); }
+#message.success { color: var(--ok); }
+#message.error { color: var(--err); }
+
+.link-btn {
+  margin-top: 14px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: #a8b2ff;
+  cursor: pointer;
+  padding: 10px 0;
+  text-decoration: underline;
+  text-align: center;
+  transition: color .3s;
+}
+.link-btn:hover { color: white; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
